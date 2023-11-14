@@ -1,18 +1,25 @@
 <button mat-icon-button [matMenuTriggerFor]='menu' aria-label='Example icon-button with a menu'>
-  <mat-icon>more_vert</mat-icon>
+  <mat-icon>menu</mat-icon>
 </button>
-<mat-menu #menu='matMenu'>
+<mat-menu #menu='matMenu' [class.open]="true">
   <button mat-menu-item>
-    <mat-icon>music</mat-icon>
+    <mat-icon>music_note</mat-icon>
     <span>Music</span>
   </button>
-  <button mat-menu-item
-          disabled>
-    <mat-icon>exercises</mat-icon>
+  <button mat-menu-item>
+    <mat-icon>apps</mat-icon>
     <span>Exercises</span>
   </button>
   <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
+    <mat-icon>queue-music</mat-icon>
     <span>Workshops</span>
   </button>
-</mat-menu>p
+  <button mat-menu-item>
+    <mat-icon>groups</mat-icon>
+    <span>Groups</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>people</mat-icon>
+    <span>Groups</span>
+  </button>
+</mat-menu>

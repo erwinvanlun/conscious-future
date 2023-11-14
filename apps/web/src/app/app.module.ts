@@ -11,7 +11,6 @@ import { MenuComponent } from '../../../../libs/yes/src/lib/shell/menu/menu.comp
     BrowserAnimationsModule,
     YesModule,
     RouterModule,
-    MenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
