@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { YesModule } from '@biodanza/yes';
 import { RouterModule } from '@angular/router';
-import { MenuComponent } from '../../../../libs/yes/src/lib/shell/menu/menu.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -11,6 +11,7 @@ import { MenuComponent } from '../../../../libs/yes/src/lib/shell/menu/menu.comp
     BrowserAnimationsModule,
     YesModule,
     RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
