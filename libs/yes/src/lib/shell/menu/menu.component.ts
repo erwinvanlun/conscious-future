@@ -6,8 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: 'menu.component.html',
 })
 export class MenuComponent {
-  constructor (public router: Router) {
-
+  constructor (private router: Router) {
   }
 
   async onNavigate(url: string) {
