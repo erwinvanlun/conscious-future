@@ -1,4 +1,6 @@
-$toolbar-height: 3rem;
+@import 'respond.mixin';
+
+$toolbar-height: 10rem;
 $content-height: calc(100vh - $toolbar-height);
 
 :host {
@@ -15,4 +17,10 @@ mat-sidenav-container, mat-sidenav-content {
   left: 0;
   height: $content-height;
 
+
+  @include respond(phone) {
+    font-size: 45%;
+    border: 5px solid blue!important;
+    --dev-profile: "phone";
+  }
 }

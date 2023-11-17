@@ -24,10 +24,13 @@
           "apps/web/src/assets"
         ],
         "styles": [
-          "libs/yes/src/lib/styles.scss"
+          "styles/global.scss"
         ],
         "stylePreprocessorOptions": {
-          "includePaths": []
+          "includePaths": [
+            "styles/functions",
+            "styles/mixins"
+          ]
         },
         "scripts": []
       },

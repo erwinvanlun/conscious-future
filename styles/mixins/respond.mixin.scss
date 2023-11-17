@@ -1,0 +1,15 @@
+@mixin respond($breakpoint, $inverse: false) {
+  $breakpoints: phone tablet laptop desktop large-desktop;
+  $values: 37.5em 50em 56.3em 73.8em  125em;
+  $width: nth($values, index($breakpoints, $breakpoint));
+
+  @if not($inverse) {
+    @media (max-width: $width) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $width + 0.01) {
+      @content;
+    }
+  }
+}
