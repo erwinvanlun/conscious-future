@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { MusicComponent } from './music/music.component';
 import { TopBarComponent } from './shell/top-bar/top-bar.component';
 import { MenuComponent } from './shell/menu/menu.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatLineModule } from '@angular/material/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule, MatButtonModule, MatMenuModule, MatIconModule],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatLineModule, MatSidenavModule, RouterLink],
   declarations: [MusicComponent, TopBarComponent, MenuComponent],
   exports: [MusicComponent, TopBarComponent, MenuComponent],
 })

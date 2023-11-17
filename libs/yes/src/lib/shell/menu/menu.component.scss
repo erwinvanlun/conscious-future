@@ -1,3 +1,18 @@
-.mat-menu.open {
-  display: block; /* or other styling to make it look open */
+$toolbar-height: 3rem;
+$content-height: calc(100vh - $toolbar-height);
+
+:host {
+  position: relative;
+}
+mat-toolbar {
+  height: $toolbar-height;
+  background-color: red;
+}
+
+mat-sidenav-container, mat-sidenav-content {
+  position: absolute;
+  top: $toolbar-height;
+  left: 0;
+  height: $content-height;
+
 }
