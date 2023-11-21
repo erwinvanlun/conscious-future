@@ -1,4 +1,5 @@
-@import 'respond.mixin';
+@import "respond.mixin";
+@import "dev-tools.mixin";
 
 $toolbar-height: 10rem;
 $content-height: calc(100vh - $toolbar-height);
@@ -6,21 +7,77 @@ $content-height: calc(100vh - $toolbar-height);
 :host {
   position: relative;
 }
-mat-toolbar {
+
+mat-toolbar.top-bar {
   height: $toolbar-height;
-  background-color: red;
+  padding-left: 0;
+
+  &:before {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    padding: 0 2rem;
+    background: blue;
+
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 5rem;
+    content: var(--dev-profile);
+
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+
+  }
+
 }
 
-mat-sidenav-container, mat-sidenav-content {
+mat-sidenav-container {
   position: absolute;
   top: $toolbar-height;
   left: 0;
   height: $content-height;
 
+  mat-sidenav {
+    background: crimson !important;
+  }
 
-  @include respond(phone) {
-    font-size: 45%;
-    border: 5px solid blue!important;
-    --dev-profile: "phone";
+  @include respond(laptop, 'exact') {
+    &:not(:hover) {
+      mat-icon {
+        margin-right: 8px;
+      }
+      .nav-item-label {
+        display: inline-block;
+        width: 0;
+      }
+    }
+
+    &:hover {
+      .nav-item-label {
+        display: inline;
+        width: unset;
+      }
+    }
+  }
+
+  @include respond(tablet, 'exact') {
+    &:not(:hover) {
+      mat-icon {
+        margin-right: 8px;
+      }
+      .nav-item-label {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .nav-item-label {
+        display: inline;
+      }
+    }
+  }
+
+  @include respond(phone,  'exact') {
+    display: none;
   }
 }

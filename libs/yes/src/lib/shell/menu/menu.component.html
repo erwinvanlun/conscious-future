@@ -1,47 +1,47 @@
-<mat-toolbar>
+<mat-toolbar class='top-bar' data-testid='shell-top-bar'>
   <button mat-icon-button (click) = "toggleNavigation()">
     <mat-icon matListItemIcon>menu</mat-icon>
   </button>
   <span>YeS!</span>
 </mat-toolbar>
-<mat-sidenav-container>
+<mat-sidenav-container class='side-nav' data-testid='shell-side-nav'>
   <mat-sidenav mode='side' [opened]='navVisible'>
     <mat-nav-list>
       <a mat-list-item routerLink='/music' data-testid='menu-item-music'>
         <mat-icon matListItemIcon>music_note</mat-icon>
-        <span>Music</span>
+        <span class='nav-item-label'>Music</span>
       </a>
       <a mat-list-item routerLink='/exercises' data-testid='menu-item-exercises'>
         <mat-icon matListItemIcon>apps</mat-icon>
-        <span>Exercises</span>
+        <span class='nav-item-label'>Exercises</span>
       </a>
       <a mat-list-item routerLink='/workshops' data-testid='menu-item-workshops'>
         <mat-icon matListItemIcon>queue-music</mat-icon>
-        <span>Workshops</span>
+        <span class='nav-item-label'>Workshops</span>
       </a>
       <a mat-list-item routerLink='/groups' data-testid='menu-item-groups'>
         <mat-icon matListItemIcon>people</mat-icon>
-        <span>Groups</span>
+        <span class='nav-item-label'>Groups</span>
       </a>
       <a mat-list-item routerLink='/events' data-testid='menu-item-events'>
         <mat-icon matListItemIcon>events</mat-icon>
-        <span>Events</span>
+        <span  class='nav-item-label'>Events</span>
       </a>
       <a mat-list-item routerLink='/schools' data-testid='menu-item-schools'>
         <mat-icon matListItemIcon>school</mat-icon>
-        <span>Schools</span>
+        <span class='nav-item-label'>Schools</span>
       </a>
       <a mat-list-item routerLink='/monographs' data-testid='menu-item-monographs'>
         <mat-icon matListItemIcon>picture_as_pdf</mat-icon>
-        <span>Monographs</span>
+        <span class='nav-item-label'>Monographs</span>
       </a>
       <a mat-list-item routerLink='/research' data-testid='menu-item-research'>
         <mat-icon matListItemIcon>psychology</mat-icon>
-        <span>Research</span>
+        <span class='nav-item-label'>Research</span>
       </a>
       <a mat-list-item routerLink='/account' data-testid='menu-item-account'>
         <mat-icon matListItemIcon>account_circle</mat-icon>
-        <span>My Account</span>
+        <span class='nav-item-label'>My Account</span>
       </a>
 
     </mat-nav-list>

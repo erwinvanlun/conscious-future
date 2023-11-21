@@ -4,21 +4,21 @@ html {
   font-size: 62.5%!important; // with 16px as default, 1rem = 10px from now
 
   --dev-profile: "extreme";
-  @include respond(large-desktop) {
+  @include respond(large-desktop, 'exact') {
     --dev-profile: "large desktop";
   }
-  @include respond(desktop) {
+  @include respond(desktop, 'exact') {
     --dev-profile: "desktop";
   }
-  @include respond(laptop) {
+  @include respond(laptop, 'exact') {
     font-size: 55%;
     --dev-profile: "laptop";
   }
-  @include respond(tablet) {
+  @include respond(tablet, 'exact') {
     font-size: 50%;
     --dev-profile: "tablet";
   }
-  @include respond(phone) {
+  @include respond(phone, 'and-smaller') {
     font-size: 45%;
     --dev-profile: "phone";
   }

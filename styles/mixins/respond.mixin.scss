@@ -1,15 +1,29 @@
-@mixin respond($breakpoint, $inverse: false) {
-  $breakpoints: phone tablet laptop desktop large-desktop;
-  $values: 37.5em 50em 56.3em 73.8em  125em;
-  $width: nth($values, index($breakpoints, $breakpoint));
+@mixin respond($breakpoint, $option: 'and-smaller') {
+  $breakpoints: phone tablet laptop desktop large-desktop extreme;
 
-  @if not($inverse) {
-    @media (max-width: $width) {
+  @if not index($breakpoints, $breakpoint) {
+    @error "Invalid breakpoint `#{$breakpoint}`. Expected one of #{$breakpoints}.";
+  }
+
+  $min-values: 0rem 37.5rem 50rem 56.3rem 73.8rem 125rem;
+  $max-values: 37.5rem 50rem 56.3rem 73.8rem 125rem 50000rem;
+
+  $min-width: nth($min-values, index($breakpoints, $breakpoint));
+  $max-width: nth($max-values, index($breakpoints, $breakpoint));
+
+  @if $option == 'exact' {
+    @media (min-width: $min-width) and (max-width: $max-width - 0.01) {
+      @content;
+    }
+  } @else if $option == 'and-smaller' {
+    @media (max-width: $max-width - 0.01) {
+      @content;
+    }
+  } @else if $option == 'and-larger' {
+    @media (min-width: $min-width) {
       @content;
     }
   } @else {
-    @media (min-width: $width + 0.01) {
-      @content;
-    }
+    @error "Invalid option `#{$option}`. Expected 'exact', 'and-smaller', or 'and-larger'.";
   }
 }
