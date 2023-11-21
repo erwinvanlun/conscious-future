@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MusicComponent } from './music/music.component';
-import { TopBarComponent } from './shell/top-bar/top-bar.component';
-import { MenuComponent } from './shell/menu/menu.component';
+import { ShellComponent } from './shell/shell.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,8 +12,8 @@ import { RouterLink } from '@angular/router';
 
 @NgModule({
   imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatLineModule, MatSidenavModule, RouterLink],
-  declarations: [MusicComponent, TopBarComponent, MenuComponent],
-  exports: [MusicComponent, TopBarComponent, MenuComponent],
+  declarations: [MusicComponent, ShellComponent],
+  exports: [MusicComponent, ShellComponent],
 })
 export class YesModule {}
 

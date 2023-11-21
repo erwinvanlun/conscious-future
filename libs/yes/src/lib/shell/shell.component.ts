@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'yes-menu',
-  templateUrl: 'menu.component.html',
-  styleUrl: 'menu.component.scss'
+  templateUrl: 'shell.component.html',
+  styleUrl: 'shell.component.scss'
 })
-export class MenuComponent {
+export class ShellComponent {
 
   isScreenSmall = true;
   navVisible = true;
