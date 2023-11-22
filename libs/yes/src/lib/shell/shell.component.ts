@@ -5,7 +5,7 @@ import { Environment } from '../environment/environment.type';
 @Component({
     selector: 'yes-menu',
     templateUrl: 'shell.component.html',
-    styleUrl: 'shell.component.scss'
+    styleUrls: ['shell.component.scss']
 })
 export class ShellComponent {
 

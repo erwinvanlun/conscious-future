@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MusicComponent } from './music.component';
 
-describe('WelcomeComponent', () => {
+describe('MusicComponent', () => {
   let component: MusicComponent;
   let fixture: ComponentFixture<MusicComponent>;
 
