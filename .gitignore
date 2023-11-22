@@ -35,5 +35,5 @@ Thumbs.db
 .angular
 
 # specific app files
-/tools/git-branch.const.ts
+/tools/git-branch.const.js
 

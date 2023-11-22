@@ -1,6 +1,6 @@
-import { GIT_BRANCH } from '../../../../tools/git-branch.const';
+import * as GitBranch from '../../../../tools/git-branch.const.js';
 
 export const environment = {
   projectId: 'blab',
-  branchName: GIT_BRANCH
+  branchName: GitBranch.GIT_BRANCH
 };
