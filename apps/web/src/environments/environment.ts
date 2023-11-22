@@ -1,4 +1,4 @@
-import * as GitBranch from '../../../../tools/git-branch.const.js';
+import * as GitBranch from 'tools/git-branch.const.js';
 
 export const environment = {
   projectId: 'blab',
