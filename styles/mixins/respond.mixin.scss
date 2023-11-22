@@ -1,12 +1,12 @@
 @mixin respond($breakpoint, $option: 'and-smaller') {
-  $breakpoints: phone tablet laptop desktop large-desktop extreme;
+  $breakpoints: phone tablet laptop desktop large-desktop;
 
   @if not index($breakpoints, $breakpoint) {
     @error "Invalid breakpoint `#{$breakpoint}`. Expected one of #{$breakpoints}.";
   }
 
-  $min-values: 0rem 37.5rem 50rem 56.3rem 73.8rem 125rem;
-  $max-values: 37.5rem 50rem 56.3rem 73.8rem 125rem 50000rem;
+  $min-values: 0rem 600px 840px 1280px 1920px;
+  $max-values: 600px 840px 1280px 1920px 50000rem;
 
   $min-width: nth($min-values, index($breakpoints, $breakpoint));
   $max-width: nth($max-values, index($breakpoints, $breakpoint));

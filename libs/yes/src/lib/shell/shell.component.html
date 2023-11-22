@@ -1,11 +1,11 @@
 <mat-toolbar class='top-bar' data-testid='shell-top-bar'>
-  <button mat-icon-button (click) = "toggleNavigation()">
+  <button class='hamburger' mat-icon-button (click) = "togglePhoneNavVisibility()">
     <mat-icon matListItemIcon>menu</mat-icon>
   </button>
   <span>YeS!</span>
 </mat-toolbar>
-<mat-sidenav-container class='side-nav' data-testid='shell-side-nav'>
-  <mat-sidenav mode='side' [opened]='navVisible'>
+<mat-sidenav-container class='side-nav' [ngClass]="{'phoneNavVisibility': phoneNavVisibility}" data-testid='shell-side-nav'>
+  <mat-sidenav mode='side' [opened]='true' >
     <mat-nav-list>
       <a mat-list-item routerLink='/music' data-testid='menu-item-music'>
         <mat-icon matListItemIcon>music_note</mat-icon>

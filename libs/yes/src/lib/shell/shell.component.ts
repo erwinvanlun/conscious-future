@@ -7,10 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ShellComponent {
 
-  isScreenSmall = true;
-  navVisible = true;
+  phoneNavVisibility = false;
 
-  toggleNavigation () {
-    this.navVisible = !this.navVisible
+  togglePhoneNavVisibility () {
+    this.phoneNavVisibility = !this.phoneNavVisibility
   }
 }

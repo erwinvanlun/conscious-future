@@ -29,55 +29,51 @@ mat-toolbar.top-bar {
 
   }
 
+  @include respond(tablet, 'and-larger') {
+    button.hamburger {
+      display: none;
+    }
+  }
 }
 
 mat-sidenav-container {
   position: absolute;
   top: $toolbar-height;
   left: 0;
+  width: 100%;
   height: $content-height;
 
   mat-sidenav {
     background: crimson !important;
-  }
 
-  @include respond(laptop, 'exact') {
-    &:not(:hover) {
-      mat-icon {
-        margin-right: 8px;
-      }
-      .nav-item-label {
-        display: inline-block;
-        width: 0;
-      }
+    mat-icon {
+      margin-right: 1.6rem;
     }
 
-    &:hover {
-      .nav-item-label {
-        display: inline;
-        width: unset;
-      }
-    }
-  }
+    @include respond(tablet, 'exact') {
+      &:not(:hover) {
+        mat-icon {
+          margin-right: 0;
+        }
 
-  @include respond(tablet, 'exact') {
-    &:not(:hover) {
-      mat-icon {
-        margin-right: 8px;
+        .nav-item-label {
+          display: inline-block;
+          width: 0;
+        }
       }
-      .nav-item-label {
-        display: none;
-      }
-    }
 
-    &:hover {
-      .nav-item-label {
-        display: inline;
+      &:hover {
+        .nav-item-label {
+          display: inline;
+        }
       }
     }
   }
 
-  @include respond(phone,  'exact') {
-    display: none;
+  @include respond(phone, 'exact') {
+    transition: height 0.3s ease-in-out;
+    &:not(.phoneNavVisibility) {
+      height: 0;
+    }
   }
 }
