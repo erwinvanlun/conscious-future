@@ -10,9 +10,9 @@ import { environment } from '../environments/environment';
   declarations: [AppComponent],
   imports: [
     BrowserAnimationsModule,
-    YesModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    YesModule,
   ],
   providers: [    { provide: ENV, useValue: environment }],
   bootstrap: [AppComponent]

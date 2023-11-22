@@ -3,23 +3,23 @@
 html {
   font-size: 62.5%!important; // with 16px as default, 1rem = 10px from now
 
-  --dev-profile: "extreme";
+  --dev-viewport: "extreme";
   @include respond(large-desktop, 'exact') {
-    --dev-profile: "large desktop";
+    --dev-viewport: "large desktop";
   }
   @include respond(desktop, 'exact') {
-    --dev-profile: "desktop";
+    --dev-viewport: "desktop";
   }
   @include respond(laptop, 'exact') {
     font-size: 55%;
-    --dev-profile: "laptop";
+    --dev-viewport: "laptop";
   }
   @include respond(tablet, 'exact') {
     font-size: 50%;
-    --dev-profile: "tablet";
+    --dev-viewport: "tablet";
   }
   @include respond(phone, 'and-smaller') {
     font-size: 45%;
-    --dev-profile: "phone";
+    --dev-viewport: "phone";
   }
 }

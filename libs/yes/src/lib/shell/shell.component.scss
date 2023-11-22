@@ -12,7 +12,7 @@ mat-toolbar.top-bar {
   height: $toolbar-height;
   padding-left: 0;
 
-  &:before {
+  .dev-meta {
     display: block;
     font-size: 1.5rem;
     line-height: 2.1rem;
@@ -23,7 +23,11 @@ mat-toolbar.top-bar {
     position: fixed;
     top: 0;
     left: 5rem;
-    content: var(--dev-profile);
+
+    &:before {
+      content: var(--dev-viewport);
+      margin-right: .5rem;
+    }
 
     clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
 

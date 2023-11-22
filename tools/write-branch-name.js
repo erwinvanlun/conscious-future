@@ -1,3 +1,7 @@
+
+/*
+** This script will be executed in .husky post-checkout hook
+ */
 const { execSync } = require('child_process');
 const fs = require('fs');
 

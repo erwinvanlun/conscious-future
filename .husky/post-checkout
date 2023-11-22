@@ -1,14 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# Debug: Output the parameters
-echo "Post-checkout hook running..."
-echo "Params: $1 $2 $3"
-
 # Check if the checkout was a branch checkout
 if [ "$3" = "1" ]; then
-    echo "Branch checkout detected."
-    # Run your Node.js script here
     node tools/write-branch-name.js
 else
     echo "File checkout detected, not running script."
