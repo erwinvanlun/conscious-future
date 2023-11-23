@@ -1,5 +1,8 @@
 /dist
 /coverage
-/.nx/cache
+/.nx
 .angular
-
+/node_modules
+/.git
+/.idea
+/.yarn
