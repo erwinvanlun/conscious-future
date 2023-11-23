@@ -3,7 +3,7 @@ import { ENV } from '../environment/environment';
 import { Environment } from '../environment/environment.type';
 
 @Component({
-    selector: 'yes-menu',
+    selector: 'yes-shell',
     templateUrl: 'shell.component.html',
     styleUrls: ['shell.component.scss']
 })
