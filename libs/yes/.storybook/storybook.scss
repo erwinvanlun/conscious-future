@@ -1,0 +1,11 @@
+@use 'styles/global.scss';
+
+body {
+    background: repeating-linear-gradient(
+                    45deg,
+                    darkgrey,
+                    darkgrey 10px,
+                    lightgrey 10px,
+                    lightgrey 21px
+    );
+}

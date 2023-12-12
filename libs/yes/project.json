@@ -33,7 +33,13 @@
         "port": 4400,
         "configDir": "libs/yes/.storybook",
         "browserTarget": "yes:build-storybook",
-        "compodoc": false
+        "compodoc": false,
+        "styles": [
+          "libs/yes/.storybook/storybook.scss"
+        ],
+        "stylePreprocessorOptions": {
+          "includePaths": ["styles/functions", "styles/mixins"]
+        }
       },
       "configurations": {
         "ci": {
@@ -45,7 +51,6 @@
       "executor": "@storybook/angular:build-storybook",
       "outputs": ["{options.outputDir}"],
       "options": {
-
         "outputDir": "dist/storybook/yes",
         "configDir": "libs/yes/.storybook",
         "browserTarget": "yes:build-storybook",

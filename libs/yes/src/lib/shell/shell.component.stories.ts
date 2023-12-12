@@ -19,7 +19,15 @@ const meta: Meta<ShellComponent> = {
   title: 'ShellComponent',
   decorators: [
     moduleMetadata({
-      imports: [BrowserAnimationsModule, MatToolbarModule, MatIconModule, MatListModule,MatLineModule, MatButtonModule, MatSidenavModule],
+      imports: [
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatListModule,
+        MatLineModule,
+        MatButtonModule,
+        MatSidenavModule
+      ],
       providers: [{ provide: ENV, useValue: { branchName: 'mock-branch' } as Environment }]
     })
   ]

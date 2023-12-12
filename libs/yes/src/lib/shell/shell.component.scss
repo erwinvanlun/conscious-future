@@ -11,6 +11,7 @@ $content-height: calc(100vh - $toolbar-height);
 mat-toolbar.top-bar {
   height: $toolbar-height;
   padding-left: 0;
+  position: relative;
 
   .dev-meta {
     display: block;
@@ -20,7 +21,7 @@ mat-toolbar.top-bar {
     background: blue;
 
     color: white;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 5rem;
 
