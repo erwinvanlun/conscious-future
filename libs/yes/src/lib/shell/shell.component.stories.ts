@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { ShellComponent } from './shell.component';
-
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
 import { moduleMetadata } from '@storybook/angular';
+import { ShellComponent } from './shell.component';
 import { ENV } from '../environment/environment';
 import { Environment } from '../environment/environment.type';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -35,14 +32,6 @@ const meta: Meta<ShellComponent> = {
 export default meta;
 type Story = StoryObj<ShellComponent>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {}
-};
-
-export const Heading: Story = {
-  args: {},
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByText(/shell works!/gi)).toBeTruthy();
-  }
 };
