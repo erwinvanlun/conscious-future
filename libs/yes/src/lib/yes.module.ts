@@ -9,12 +9,21 @@ import { MatListModule } from '@angular/material/list';
 import { MatLineModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterLink } from '@angular/router';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
-  imports: [CommonModule,  MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatLineModule, MatSidenavModule, RouterLink],
-  declarations: [MusicComponent, ShellComponent],
+  imports: [
+    CommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
+    MatLineModule,
+    MatSidenavModule,
+    RouterLink
+  ],
+  declarations: [MusicComponent, ShellComponent, LogoComponent],
   exports: [MusicComponent, ShellComponent]
 })
-export class YesModule {
-}
+export class YesModule {}
 

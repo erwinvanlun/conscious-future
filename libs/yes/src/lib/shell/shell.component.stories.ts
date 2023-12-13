@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatLineModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LogoComponent } from '../logo/logo.component';
 
 const meta: Meta<ShellComponent> = {
   component: ShellComponent,
@@ -25,6 +26,7 @@ const meta: Meta<ShellComponent> = {
         MatButtonModule,
         MatSidenavModule
       ],
+      declarations: [LogoComponent],
       providers: [{ provide: ENV, useValue: { branchName: 'mock-branch' } as Environment }]
     })
   ]
