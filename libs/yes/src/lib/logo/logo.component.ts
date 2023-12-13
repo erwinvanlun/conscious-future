@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent {
-  @Input() widthInRem = 10;
+  @Input() widthInRem = 5;
 }
