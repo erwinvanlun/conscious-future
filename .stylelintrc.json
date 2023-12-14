@@ -11,7 +11,10 @@
       "rules": {
         "indentation": 2,
         "color-named": "never",
-        "max-empty-lines": 1
+        "max-empty-lines": 1,
+        "color-no-hex": true,
+        "function-disallowed-list": ["darken", "lighten", "rgba", "rgb"],
+        "declaration-no-important": true
       }
     }
   ],

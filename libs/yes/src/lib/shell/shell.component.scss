@@ -18,8 +18,8 @@ mat-toolbar.top-bar {
     font-size: 1.5rem;
     line-height: 2.1rem;
     padding: 0 2rem;
-    background: blue;
-    color: white;
+    background: var(--root-color-dev-branch-bg);
+    color: var(--root-color-dev-branch-font);
     position: absolute;
     top: 0;
     left: 5rem;
@@ -48,8 +48,6 @@ mat-sidenav-container {
   height: $content-height;
 
   mat-sidenav {
-    background: crimson !important;
-
     mat-icon {
       margin-right: 1.6rem;
     }

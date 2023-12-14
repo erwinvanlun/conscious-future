@@ -1,7 +1,4 @@
-
-  .logo {
-  // todo: define color
-  fill: white;
-  stroke: none;
+.logo {
+  fill: var(--root-color-logo-fill);
+  stroke: none
 }
-
