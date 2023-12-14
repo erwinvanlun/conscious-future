@@ -10,11 +10,11 @@
       "extends": ["stylelint-config-standard-scss"],
       "rules": {
         "indentation": 2,
-        "color-named": "never",
         "max-empty-lines": 1,
+        "declaration-no-important": true,
+        "color-named": "never",
         "color-no-hex": true,
-        "function-disallowed-list": ["darken", "lighten", "rgba", "rgb"],
-        "declaration-no-important": true
+        "function-disallowed-list": ["darken", "lighten", "rgba", "rgb"]
       }
     }
   ],

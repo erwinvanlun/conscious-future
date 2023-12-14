@@ -74,6 +74,13 @@
         "lintFilePatterns": ["apps/web/**/*.ts", "apps/web/**/*.html"]
       }
     },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["{projectRoot}/**/*.scss", "{projectRoot}/**/*.css"]
+      }
+    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
