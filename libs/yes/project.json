@@ -27,6 +27,13 @@
         "lintFilePatterns": ["libs/yes/**/*.ts", "libs/yes/**/*.html"]
       }
     },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["{projectRoot}/**/*.scss", "{projectRoot}/**/*.css"]
+      }
+    },
     "storybook": {
       "executor": "@storybook/angular:start-storybook",
       "options": {
@@ -64,13 +71,6 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "test-storybook -c libs/yes/.storybook --url=http://localhost:4400"
-      }
-    },
-    "stylelint": {
-      "executor": "nx-stylelint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/yes/**/*.css"]
       }
     }
   }
