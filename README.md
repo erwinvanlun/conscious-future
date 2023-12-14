@@ -6,6 +6,14 @@
 
 To start the development server run `nx serve web`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
+## Linting
+
+styling on a specific project:
+> > `nx stylelint <projectname> --skip-nx-cache`
+
+run style lint all all projects:
+> `nx run-many -t stylelint --skip-nx-cache`
+
 ## Test Driven Development
 
 ### Storybook
