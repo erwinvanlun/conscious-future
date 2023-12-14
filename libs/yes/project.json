@@ -34,9 +34,7 @@
         "configDir": "libs/yes/.storybook",
         "browserTarget": "yes:build-storybook",
         "compodoc": false,
-        "styles": [
-          "libs/yes/.storybook/storybook.scss"
-        ],
+        "styles": ["libs/yes/.storybook/storybook.scss"],
         "stylePreprocessorOptions": {
           "includePaths": ["styles/functions", "styles/mixins"]
         }
@@ -66,6 +64,13 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "test-storybook -c libs/yes/.storybook --url=http://localhost:4400"
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/yes/**/*.css"]
       }
     }
   }
