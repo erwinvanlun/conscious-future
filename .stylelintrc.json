@@ -8,7 +8,11 @@
     {
       "files": ["**/*.scss"],
       "extends": ["stylelint-config-standard-scss"],
-      "rules": {}
+      "rules": {
+        "indentation": 2,
+        "color-named": "never",
+        "max-empty-lines": 1
+      }
     }
   ],
   "rules": {}
