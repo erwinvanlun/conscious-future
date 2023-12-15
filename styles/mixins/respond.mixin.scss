@@ -1,3 +1,5 @@
+@use "sass:list";
+
 @mixin respond($breakpoint, $option: 'and-smaller') {
   $breakpoints: phone tablet laptop desktop large-desktop;
 
@@ -5,11 +7,10 @@
     @error "Invalid breakpoint `#{$breakpoint}`. Expected one of #{$breakpoints}.";
   }
 
-  $min-values: 0rem 600px 840px 1280px 1920px;
+  $min-values: 0 600px 840px 1280px 1920px;
   $max-values: 600px 840px 1280px 1920px 50000rem;
-
-  $min-width: nth($min-values, index($breakpoints, $breakpoint));
-  $max-width: nth($max-values, index($breakpoints, $breakpoint));
+  $min-width: list.nth($min-values, list.index($breakpoints, $breakpoint));
+  $max-width: list.nth($max-values, list.index($breakpoints, $breakpoint));
 
   @if $option == 'exact' {
     @media (min-width: $min-width) and (max-width: $max-width - 0.01) {

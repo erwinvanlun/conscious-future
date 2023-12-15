@@ -1,25 +1,33 @@
 @import './mixins/respond.mixin';
 
 html {
-  font-size: 62.5%!important; // with 16px as default, 1rem = 10px from now
+  font-size: 62.5%; // with 16px as default, 1rem = 10px from now
 
   --dev-viewport: "extreme";
+
   @include respond(large-desktop, 'exact') {
     --dev-viewport: "large desktop";
   }
+
   @include respond(desktop, 'exact') {
     --dev-viewport: "desktop";
   }
+
   @include respond(laptop, 'exact') {
     font-size: 55%;
+
     --dev-viewport: "laptop";
   }
+
   @include respond(tablet, 'exact') {
     font-size: 50%;
+
     --dev-viewport: "tablet";
   }
+
   @include respond(phone, 'and-smaller') {
     font-size: 45%;
+
     --dev-viewport: "phone";
   }
 }

@@ -9,9 +9,9 @@ To start the development server run `nx serve web`. Open your browser and naviga
 ## Linting
 
 styling on a specific project:
-> > `nx stylelint <projectname> --skip-nx-cache`
+> `nx stylelint <projectname> --skip-nx-cache`
 
-run style lint all all projects:
+run style lint all projects:
 > `nx run-many -t stylelint --skip-nx-cache`
 
 ## Test Driven Development

@@ -1,0 +1,16 @@
+{
+  "name": "styling",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "styles",
+  "tags": [],
+  "targets": {
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["{projectRoot}/**/*.scss", "{projectRoot}/**/*.css"]
+      }
+    }
+  }
+}
