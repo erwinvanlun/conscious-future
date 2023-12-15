@@ -1,17 +1,35 @@
 # Biodanza
 
-## Init the repo
+## Prepare
+
+| Package | Version  |
+| :------ |----------|
+| Node    | 18.17.0  |
+| Yarn    | v1.22.19 |
 
 ## Start the app
 
-To start the development server run `nx serve web`. Open your browser and navigate to http://localhost:4200/. Happy coding!
+> `yarn`  
+
+> `nx serve web`
+ 
+Browse to http://localhost:4200/
+
+## Generating code
+Nx has various ways to generate code based on schematics. For any Nx command you can use the --dry-run flag to see what would happen if you have run a certain command
+
+- Generate project (application or library) inside top-level folder
+
+> `nx g lib <project name> --directory=<apps | libs>`
 
 ## Linting
 
 styling on a specific project:
+
 > `nx stylelint <projectname> --skip-nx-cache`
 
 run style lint all projects:
+
 > `nx run-many -t stylelint --skip-nx-cache`
 
 ## Test Driven Development
