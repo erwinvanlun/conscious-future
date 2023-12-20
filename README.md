@@ -1,4 +1,6 @@
-# Biodanza
+# Conscious Future
+
+Apps that contribute to global growth of consciousness
 
 ## Prepare
 
